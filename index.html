@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="cheatCode.js"></script>
+    </head>
+    <body>
+        <h1 id="keyPreviewer" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Courier New', Courier, monospace"></h1>
+        <script type="text/javascript">
+            (() => {
+                const _keyPreviewer = document.getElementById("keyPreviewer");
+            
+                window.addEventListener("keyup", evt => {
+                    _keyPreviewer.innerHTML = evt.key;
+                    _keyPreviewer.style.color = "lightgreen";
+                    setTimeout(() => { _keyPreviewer.style.color = "black"; }, 100);
+                }); 
+            })();
+        </script>
+    </body>
+</html>
