@@ -15,14 +15,8 @@
 		code: ["a", "b", "a", "c", "a", "b", "b"] }
 	];
 
-	const getPressedLimit = () => {
-		let limit = 0;
-		_codes.forEach(c => { if (c.code.length > limit) limit = c.code.length; });
-		return limit;
-	}
-
 	let _pressed = [];
-	const _pressedLimit = getPressedLimit();
+	const _pressedLimit = _codes.reduce((a, b) => { return a.code.length > b.code.length ? a : b }).code.length;
 
 	const maintainPressedLength = () => { _pressed.splice(-_pressedLimit - 1, _pressed.length - _pressedLimit); }
 	const isEnteredCodeCorrect = () => {
