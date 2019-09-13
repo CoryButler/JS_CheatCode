@@ -1,3 +1,6 @@
+// Uncomment to get key names when building your cheat code.
+// (() => { window.addEventListener("keyup", evt => { console.log(evt.key); }); })();
+
 (() => {
 	const _code = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
 	const _codeLength = _code.length;
